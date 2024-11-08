@@ -19,5 +19,14 @@ class DetailActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // MainActivityからPOSITIONを受け取る
+        val position = intent.getIntExtra("POSITION", 0)
+
+        val data = listData[position]
+
+        binding.detailImage.setImageResource(data["image"].toString().toInt())
+        binding.detailTitle.text = data["name"].toString()
+        binding.detailText.text = data["explain"].toString()
     }
 }
