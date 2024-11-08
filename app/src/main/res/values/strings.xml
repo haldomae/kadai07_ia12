@@ -3,4 +3,7 @@
     <string name="detail_title">詳細のタイトル</string>
     <string name="detail_text">詳細の説明テキスト</string>
     <string name="like">いいね</string>
+    <!-- 図鑑一覧のアイテム -->
+    <string name="image_description">画像がありません</string>
+    <string name="list_title">リストのタイトル</string>
 </resources>
