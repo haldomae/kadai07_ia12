@@ -2,6 +2,7 @@ package com.hal_domae.kadai07_ia13
 
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -39,5 +40,16 @@ class MainActivity : AppCompatActivity() {
             android.R.layout.simple_expandable_list_item_1,
             data
         )
+
+        // 項目をタップした時のリスナー
+        // Toastは画面下部に表示される簡易的なメッセージ
+        // Toastの引数は1:コンテキスト、2:表示する文字列、3:表示時間(Toast.LENGTH_SHORTは短い)
+        binding.list.setOnItemClickListener { parent, view, position, id ->
+            Toast.makeText(
+                this@MainActivity,
+                "${data[position]}を選択しました",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
     }
 }
